@@ -25,7 +25,12 @@
       <!-- navbar -->
       <div class="p-4 flex justify-between bg-white sticky w-full top-0 z-40">
         <div class="flex justify-center items-center gap-5">
-          <img src="images/icon-menu.svg" class="size-5" alt="menu icons" />
+          <img
+            id="menu-btn"
+            src="images/icon-menu.svg"
+            class="size-5"
+            alt="menu icons"
+          />
           <h3 class="text-4xl font-display font-bold">sneakers</h3>
         </div>
         <div class="flex justify-center items-center gap-5">
@@ -40,11 +45,13 @@
 
       <!-- toggle menu bar -->
       <div
-      id="toggle-menu-bar"
+        id="toggle-menu-bar"
         class="bg-black/50 hidden overflow-hidden backdrop-brightness-75 z-50 w-full absolute mt-[-70px]"
       >
         <div class="bg-white w-70 h-[100vh] p-8">
-          <img src="images/icon-close.svg" class="sticky top-5" alt="" />
+          <button id="close-btn">
+            <img src="images/icon-close.svg" class="sticky top-5" alt="" />
+          </button>
           <div class="mt-6 text-black font-bold sticky top-15 font-display">
             <ul class="flex gap-2 flex-col">
               <li>collections</li>
