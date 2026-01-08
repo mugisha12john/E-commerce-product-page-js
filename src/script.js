@@ -12,9 +12,5 @@ closeBtn.addEventListener("click", () => {
   document.body.style.overflow = "visible";
 });
 cartBtn.addEventListener("click", () => {
-  if (cartItems.classList.toggle("hidden")) {
-    document.body.style.overflow = "visible";
-  } else {
-    document.body.style.overflow = "hidden";
-  }
+  cartItems.classList.toggle("hidden");
 });
