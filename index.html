@@ -24,17 +24,32 @@
     <main class="relative">
       <!-- navbar -->
       <div class="p-4 flex justify-between bg-white sticky w-full top-0 z-40">
-        <div class="flex justify-center items-center gap-5">
+        <div class="flex justify-center items-center lg:ml-12 gap-5">
           <img
             id="menu-btn"
             src="images/icon-menu.svg"
-            class="size-5"
+            class="size-5 lg:hidden"
             alt="menu icons"
           />
           <h3 class="text-4xl font-display font-bold">sneakers</h3>
+          <ul
+            class="hidden md:block capitalize text-[16px] font-normal lg:ml-12 text-gray-500 lg:flex justify-center items-center gap-5"
+          >
+            <li>collections</li>
+            <li>men</li>
+            <li>women</li>
+            <li>about</li>
+            <li>contact</li>
+          </ul>
         </div>
-        <div class="flex justify-center items-center gap-5">
-          <img id="cart-btn" src="images/icon-cart.svg" class="size-6" alt="icon-cart" />
+
+        <div class="flex justify-center items-center gap-5 lg:mr-10">
+          <img
+            id="cart-btn"
+            src="images/icon-cart.svg"
+            class="size-6"
+            alt="icon-cart"
+          />
           <img
             src="images/image-avatar.png"
             class="size-10"
@@ -46,7 +61,7 @@
       <!-- toggle menu bar -->
       <div
         id="toggle-menu-bar"
-        class="bg-black/50 hidden overflow-hidden backdrop-brightness-75 z-50 w-full absolute mt-[-70px]"
+        class="bg-black/50 hidden lg:hidden overflow-hidden backdrop-brightness-75 z-50 w-full absolute mt-[-70px]"
       >
         <div class="bg-white w-70 h-[100vh] p-8">
           <button id="close-btn">
@@ -95,7 +110,7 @@
       <div class="relative z-10">
         <img src="images/image-product-1.jpg" class="w-full" alt="" />
         <div class="absolute top-45 mr-4 ml-4">
-          <div class="flex justify-between items-center">
+          <div class="flex justify-between items-center lg:hidden">
             <button
               class="w-10 h-10 rounded-full bg-white flex justify-center items-center"
             >
