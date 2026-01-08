@@ -12,13 +12,146 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/src/output.css" />
-
-    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>E-commerce product page</title>
   </head>
-  <body class="bg-red-400 text-2xl">
-    Collections Men Women About Contact Sneaker Company Fall Limited Edition
-    Sneakers These low-profile sneakers are your perfect casual wear companion.
-    Featuring a durable rubber outer sole, they’ll withstand everything the
-    weather can offer. $125.00 50% $250.00 0 Add to cart
+  <body class="m-0 p-0">
+    <main class="relative">
+      <!-- navbar -->
+      <div class="p-4 flex justify-between bg-white sticky w-full top-0 z-40">
+        <div class="flex justify-center items-center gap-5">
+          <img
+            id="menu-btn"
+            src="images/icon-menu.svg"
+            class="size-5"
+            alt="menu icons"
+          />
+          <h3 class="text-4xl font-display font-bold">sneakers</h3>
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <img id="cart-btn" src="images/icon-cart.svg" class="size-6" alt="icon-cart" />
+          <img
+            src="images/image-avatar.png"
+            class="size-10"
+            alt="profile image"
+          />
+        </div>
+      </div>
+
+      <!-- toggle menu bar -->
+      <div
+        id="toggle-menu-bar"
+        class="bg-black/50 hidden overflow-hidden backdrop-brightness-75 z-50 w-full absolute mt-[-70px]"
+      >
+        <div class="bg-white w-70 h-[100vh] p-8">
+          <button id="close-btn">
+            <img src="images/icon-close.svg" class="sticky top-5" alt="" />
+          </button>
+          <div class="mt-6 text-black font-bold sticky top-15 font-display">
+            <ul class="flex gap-2 flex-col">
+              <li>collections</li>
+              <li>men</li>
+              <li>women</li>
+              <li>about</li>
+              <li>contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- toggle cart card -->
+      <div id="cart-items" class="m-4 hidden absolute mt-[20px] z-40">
+        <div class="bg-white w-[360px] h-80 p-4 rounded-2xl">
+          <h1 class="capitalize font-display font-bold text-xl mt-5">cart</h1>
+          <div class="mt-10 flex justify-between items-center gap-5">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              class="size-14"
+              alt=""
+            />
+            <div>
+              <h1 class="font-display text-xl capitalize text-gray-500">
+                fall edition limited
+              </h1>
+              <p class="text-gray-500 text-xl font-display">
+                $123 X 3 <b class="text-black">$435</b>
+              </p>
+            </div>
+            <img src="images/icon-delete.svg" class="size-6" alt="" />
+          </div>
+          <button
+            class="bg-amber-600 p-2 w-full text-xl font-semibold capitalize font-display mt-10 rounded-xl"
+          >
+            checkout
+          </button>
+        </div>
+      </div>
+      <!-- hero section -->
+      <div class="relative z-10">
+        <img src="images/image-product-1.jpg" class="w-full" alt="" />
+        <div class="absolute top-45 mr-4 ml-4">
+          <div class="flex justify-between items-center">
+            <button
+              class="w-10 h-10 rounded-full bg-white flex justify-center items-center"
+            >
+              <img class="size-5" src="images/icon-previous.svg" alt="" />
+            </button>
+            <button
+              class="w-10 ml-72 h-10 rounded-full bg-white flex justify-center items-center"
+            >
+              <img class="size-5" src="images/icon-next.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero description -->
+      <div>
+        <div class="mt-10 m-4">
+          <h1 class="uppercase text-xl text-gray-600 font-display font-bold">
+            sneakers company
+          </h1>
+          <h4 class="capitalize mt-5 text-4xl font-bold font-display">
+            fall limited edition sneakers
+          </h4>
+          <p class="mt-5 text-gray-400 font-medium font-display text-xl">
+            These low-profile sneakers are your perfect casual wear companion.
+            featuring a durable rubber outer sole. they'll withstand everything
+            the weather can offer
+          </p>
+        </div>
+      </div>
+      <!-- add in cart, see tatol -->
+      <div class="flex items-center justify-between">
+        <div class="m-4 flex justify-center gap-5 item-center">
+          <h3 class="text-3xl font-bold">$124.100</h3>
+          <button
+            class="w-15 h-10 rounded-xl text-white bg-black font-bold font-display"
+          >
+            50%
+          </button>
+        </div>
+        <h3 class="text-gray-500 line-through mr-4 text-xl">$250.00</h3>
+      </div>
+      <!-- buttons goes here -->
+      <div>
+        <div class="m-4 flex justify-evenly items-center">
+          <button><img src="images/icon-minus.svg" alt="" /></button>
+          <p class="text-2xl font-bold">0</p>
+          <button><img src="images/icon-plus.svg" alt="" /></button>
+        </div>
+        <button
+          class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center p-2 gap-5 rounded-2xl"
+        >
+          <img src="images/icon-cart.svg" class="" alt="" /> add cart
+        </button>
+      </div>
+    </main>
+    <script src="src/script.js"></script>
   </body>
 </html>
