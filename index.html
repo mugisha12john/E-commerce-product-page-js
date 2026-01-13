@@ -35,11 +35,31 @@
           <ul
             class="hidden md:block capitalize text-[16px] font-normal lg:ml-12 text-gray-500 lg:flex justify-center items-center gap-5"
           >
-            <li>collections</li>
-            <li>men</li>
-            <li>women</li>
-            <li>about</li>
-            <li>contact</li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              collections
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              men
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              women
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              about
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              contact
+            </li>
           </ul>
         </div>
 
@@ -47,12 +67,12 @@
           <img
             id="cart-btn"
             src="images/icon-cart.svg"
-            class="size-6"
+            class="size-6 hover:cursor-pointer"
             alt="icon-cart"
           />
           <img
             src="images/image-avatar.png"
-            class="size-10"
+            class="size-10 hover:cursor-pointer hover:border-2 hover:border-amber-600 hover:rounded-full"
             alt="profile image"
           />
         </div>
@@ -80,7 +100,10 @@
       </div>
 
       <!-- toggle cart card -->
-      <div id="cart-items" class="m-4 hidden absolute mt-[20px] z-40">
+      <div
+        id="cart-items"
+        class="m-4 hidden absolute mt-[20px] z-40 lg:ml-[900px] shadow-2xl shadow-gray-500 rounded-2xl"
+      >
         <div class="bg-white w-[360px] h-80 p-4 rounded-2xl">
           <h1 class="capitalize font-display font-bold text-xl mt-5">cart</h1>
           <div class="mt-10 flex justify-between items-center gap-5">
@@ -93,14 +116,18 @@
               <h1 class="font-display text-xl capitalize text-gray-500">
                 fall edition limited
               </h1>
-              <p class="text-gray-500 text-xl font-display">
+              <p class="text-gray-500 text-xl lg:text-sm font-display">
                 $123 X 3 <b class="text-black">$435</b>
               </p>
             </div>
-            <img src="images/icon-delete.svg" class="size-6" alt="" />
+            <img
+              src="images/icon-delete.svg"
+              class="size-6 lg:size-4 hover:cursor-pointer"
+              alt=""
+            />
           </div>
           <button
-            class="bg-amber-600 p-2 w-full text-xl font-semibold capitalize font-display mt-10 rounded-xl"
+            class="bg-amber-600 p-2 w-full text-xl lg:text-sm font-semibold capitalize font-display mt-10 rounded-xl"
           >
             checkout
           </button>
@@ -205,16 +232,20 @@
             class="lg:w-1/2 lg:flex lg:justify-center lg:items-center lg:gap-10"
           >
             <div class="m-4 flex justify-evenly items-center lg:gap-10">
-              <button class="size-10">
+              <button class="size-10 hover:cursor-pointer hover:opacity-50">
                 <img src="images/icon-minus.svg" alt="" />
               </button>
-              <p class="text-2xl font-bold">0</p>
-              <button class="size-10">
+              <p class="text-2xl font-bold lg:font-medium lg:text-xl lg:-ml-6">
+                0
+              </p>
+              <button
+                class="size-10 lg:size-14 hover:cursor-pointer hover:opacity-50"
+              >
                 <img src="images/icon-plus.svg" alt="" />
               </button>
             </div>
             <button
-              class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center lg:w-1/2 lg:h-12 p-2 gap-5 rounded-2xl lg:text-lg"
+              class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center lg:w-1/2 lg:h-12 p-2 gap-5 rounded-2xl lg:text-lg hover:opacity-60 hover:cursor-pointer"
             >
               <img src="images/icon-cart.svg" class="" alt="" /> add cart
             </button>
