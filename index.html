@@ -24,20 +24,55 @@
     <main class="relative">
       <!-- navbar -->
       <div class="p-4 flex justify-between bg-white sticky w-full top-0 z-40">
-        <div class="flex justify-center items-center gap-5">
+        <div class="flex justify-center items-center lg:ml-12 gap-5">
           <img
             id="menu-btn"
             src="images/icon-menu.svg"
-            class="size-5"
+            class="size-5 lg:hidden"
             alt="menu icons"
           />
           <h3 class="text-4xl font-display font-bold">sneakers</h3>
+          <ul
+            class="hidden md:block capitalize text-[16px] font-normal lg:ml-12 text-gray-500 lg:flex justify-center items-center gap-5"
+          >
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              collections
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              men
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              women
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              about
+            </li>
+            <li
+              class="hover:border-b-2 hover:border-amber-600 hover:cursor-pointer py-4"
+            >
+              contact
+            </li>
+          </ul>
         </div>
-        <div class="flex justify-center items-center gap-5">
-          <img id="cart-btn" src="images/icon-cart.svg" class="size-6" alt="icon-cart" />
+
+        <div class="flex justify-center items-center gap-5 lg:mr-10">
+          <img
+            id="cart-btn"
+            src="images/icon-cart.svg"
+            class="size-6 hover:cursor-pointer"
+            alt="icon-cart"
+          />
           <img
             src="images/image-avatar.png"
-            class="size-10"
+            class="size-10 hover:cursor-pointer hover:border-2 hover:border-amber-600 hover:rounded-full"
             alt="profile image"
           />
         </div>
@@ -46,7 +81,7 @@
       <!-- toggle menu bar -->
       <div
         id="toggle-menu-bar"
-        class="bg-black/50 hidden overflow-hidden backdrop-brightness-75 z-50 w-full absolute mt-[-70px]"
+        class="bg-black/50 hidden lg:hidden overflow-hidden backdrop-brightness-75 z-50 w-full absolute mt-[-70px]"
       >
         <div class="bg-white w-70 h-[100vh] p-8">
           <button id="close-btn">
@@ -65,7 +100,10 @@
       </div>
 
       <!-- toggle cart card -->
-      <div id="cart-items" class="m-4 hidden absolute mt-[20px] z-40">
+      <div
+        id="cart-items"
+        class="m-4 hidden absolute mt-[20px] z-40 lg:ml-[900px] shadow-2xl shadow-gray-500 rounded-2xl"
+      >
         <div class="bg-white w-[360px] h-80 p-4 rounded-2xl">
           <h1 class="capitalize font-display font-bold text-xl mt-5">cart</h1>
           <div class="mt-10 flex justify-between items-center gap-5">
@@ -78,78 +116,141 @@
               <h1 class="font-display text-xl capitalize text-gray-500">
                 fall edition limited
               </h1>
-              <p class="text-gray-500 text-xl font-display">
+              <p class="text-gray-500 text-xl lg:text-sm font-display">
                 $123 X 3 <b class="text-black">$435</b>
               </p>
             </div>
-            <img src="images/icon-delete.svg" class="size-6" alt="" />
+            <img
+              src="images/icon-delete.svg"
+              class="size-6 lg:size-4 hover:cursor-pointer"
+              alt=""
+            />
           </div>
           <button
-            class="bg-amber-600 p-2 w-full text-xl font-semibold capitalize font-display mt-10 rounded-xl"
+            class="bg-amber-600 p-2 w-full text-xl lg:text-sm font-semibold capitalize font-display mt-10 rounded-xl"
           >
             checkout
           </button>
         </div>
       </div>
       <!-- hero section -->
-      <div class="relative z-10">
-        <img src="images/image-product-1.jpg" class="w-full" alt="" />
-        <div class="absolute top-45 mr-4 ml-4">
-          <div class="flex justify-between items-center">
-            <button
-              class="w-10 h-10 rounded-full bg-white flex justify-center items-center"
-            >
-              <img class="size-5" src="images/icon-previous.svg" alt="" />
+      <div class="lg:flex lg:justify-center lg:items-center lg:ml-48">
+        <div class="relative z-10">
+          <img
+            src="images/image-product-1.jpg"
+            class="w-full lg:w-[500px] mt-14 lg:h-[400px] lg:rounded-2xl"
+            alt=""
+          />
+          <div class="lg:mt-4 hidden lg:flex justify-evenly">
+            <button class="opacity-50 border-4 border-amber-600 rounded-xl">
+              <img
+                src="images/image-product-1.jpg"
+                class="size-20 rounded-xl"
+                alt=""
+              />
             </button>
-            <button
-              class="w-10 ml-72 h-10 rounded-full bg-white flex justify-center items-center"
+            <button class="hover:opacity-50 hover:cursor-pointer">
+              <img
+                src="images/image-product-2.jpg"
+                class="size-20 rounded-xl"
+                alt=""
+              />
+            </button>
+            <button class="hover:opacity-50 hover:cursor-pointer">
+              <img
+                src="images/image-product-3.jpg"
+                class="size-20 rounded-xl"
+                alt=""
+              />
+            </button>
+            <button class="hover:opacity-50 hover:cursor-pointer">
+              <img
+                src="images/image-product-4.jpg"
+                class="size-20 rounded-xl"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="absolute top-45 mr-4 ml-4">
+            <div class="flex justify-between items-center lg:hidden">
+              <button
+                class="w-10 h-10 rounded-full bg-white flex justify-center items-center"
+              >
+                <img class="size-5" src="images/icon-previous.svg" alt="" />
+              </button>
+              <button
+                class="w-10 ml-72 h-10 rounded-full bg-white flex justify-center items-center"
+              >
+                <img class="size-5" src="images/icon-next.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- hero description -->
+        <div class="lg:ml-20">
+          <div class="lg:w-1/2">
+            <div class="mt-10 m-4">
+              <h1
+                class="uppercase text-xl lg:text-sm text-gray-600 font-display font-bold"
+              >
+                sneakers company
+              </h1>
+              <h4 class="capitalize mt-5 text-4xl font-bold font-display">
+                fall limited edition sneakers
+              </h4>
+              <p
+                class="mt-5 text-gray-400 font-medium font-display lg:text-sm text-xl"
+              >
+                These low-profile sneakers are your perfect casual wear
+                companion. featuring a durable rubber outer sole. they'll
+                withstand everything the weather can offer
+              </p>
+            </div>
+          </div>
+          <!-- add in cart, see tatol -->
+          <div
+            class="lg:w-1/2 flex justify-center items-center lg:justify-start lg:items-start lg:flex-col"
+          >
+            <div
+              class="m-4 flex justify-center gap-5 item-center lg:justify-start"
             >
-              <img class="size-5" src="images/icon-next.svg" alt="" />
+              <h3 class="text-3xl font-bold lg:text-2xl">$124.100</h3>
+              <button
+                class="w-15 h-10 lg:w-10 lg:h-8 lg:text-sm rounded-xl text-white bg-black font-bold font-display"
+              >
+                50%
+              </button>
+            </div>
+
+            <h3 class="text-gray-500 line-through mr-4 text-xl lg:ml-4">
+              $250.00
+            </h3>
+          </div>
+          <!-- buttons goes here -->
+          <div
+            class="lg:w-1/2 lg:flex lg:justify-center lg:items-center lg:gap-10"
+          >
+            <div class="m-4 flex justify-evenly items-center lg:gap-10">
+              <button class="size-10 hover:cursor-pointer hover:opacity-50">
+                <img src="images/icon-minus.svg" alt="" />
+              </button>
+              <p class="text-2xl font-bold lg:font-medium lg:text-xl lg:-ml-6">
+                0
+              </p>
+              <button
+                class="size-10 lg:size-14 hover:cursor-pointer hover:opacity-50"
+              >
+                <img src="images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+            <button
+              class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center lg:w-1/2 lg:h-12 p-2 gap-5 rounded-2xl lg:text-lg hover:opacity-60 hover:cursor-pointer"
+            >
+              <img src="images/icon-cart.svg" class="" alt="" /> add cart
             </button>
           </div>
         </div>
-      </div>
-
-      <!-- hero description -->
-      <div>
-        <div class="mt-10 m-4">
-          <h1 class="uppercase text-xl text-gray-600 font-display font-bold">
-            sneakers company
-          </h1>
-          <h4 class="capitalize mt-5 text-4xl font-bold font-display">
-            fall limited edition sneakers
-          </h4>
-          <p class="mt-5 text-gray-400 font-medium font-display text-xl">
-            These low-profile sneakers are your perfect casual wear companion.
-            featuring a durable rubber outer sole. they'll withstand everything
-            the weather can offer
-          </p>
-        </div>
-      </div>
-      <!-- add in cart, see tatol -->
-      <div class="flex items-center justify-between">
-        <div class="m-4 flex justify-center gap-5 item-center">
-          <h3 class="text-3xl font-bold">$124.100</h3>
-          <button
-            class="w-15 h-10 rounded-xl text-white bg-black font-bold font-display"
-          >
-            50%
-          </button>
-        </div>
-        <h3 class="text-gray-500 line-through mr-4 text-xl">$250.00</h3>
-      </div>
-      <!-- buttons goes here -->
-      <div>
-        <div class="m-4 flex justify-evenly items-center">
-          <button><img src="images/icon-minus.svg" alt="" /></button>
-          <p class="text-2xl font-bold">0</p>
-          <button><img src="images/icon-plus.svg" alt="" /></button>
-        </div>
-        <button
-          class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center p-2 gap-5 rounded-2xl"
-        >
-          <img src="images/icon-cart.svg" class="" alt="" /> add cart
-        </button>
       </div>
     </main>
     <script src="src/script.js"></script>
