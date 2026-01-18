@@ -75,3 +75,22 @@ mobilePrevBtn.addEventListener("click", () => {
   mobilePrev();
   showImage(currentIndex, "desktop");
 });
+
+// increment or decrement cart
+const minusBtn = document.getElementById("minus-btn");
+const result = document.getElementById("result");
+const plusBtn = document.getElementById("plus-btn");
+
+let currentCart = 0;
+minusBtn.addEventListener("click", () => {
+  currentCart -= 1;
+  if (currentCart < 0) {
+    alert("You can not have negative cart");
+    return;
+  }
+  result.innerText = currentCart;
+});
+plusBtn.addEventListener("click", () => {
+  currentCart += 1;
+  result.innerText = currentCart;
+});
