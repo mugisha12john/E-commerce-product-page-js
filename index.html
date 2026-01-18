@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -137,9 +137,10 @@
       <div class="lg:flex lg:justify-center lg:items-center lg:ml-48">
         <div class="relative z-10">
           <img
+            id="hero-section"
             src="images/image-product-1.jpg"
             class="w-full lg:w-[500px] mt-14 lg:h-[400px] lg:rounded-2xl"
-            alt=""
+            alt="background"
           />
           <div class="lg:mt-4 hidden lg:flex justify-evenly">
             <button
@@ -174,14 +175,17 @@
               />
             </button>
           </div>
+          <!-- mobile btn change images -->
           <div class="absolute top-45 mr-4 ml-4">
             <div class="flex justify-between items-center lg:hidden">
               <button
+                id="mobile-prev-btn"
                 class="w-10 h-10 rounded-full bg-white flex justify-center items-center"
               >
                 <img class="size-5" src="images/icon-previous.svg" alt="" />
               </button>
               <button
+                id="mobile-next-btn"
                 class="w-10 ml-72 h-10 rounded-full bg-white flex justify-center items-center"
               >
                 <img class="size-5" src="images/icon-next.svg" alt="" />
