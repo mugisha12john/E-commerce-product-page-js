@@ -80,6 +80,7 @@ mobilePrevBtn.addEventListener("click", () => {
 const minusBtn = document.getElementById("minus-btn");
 const result = document.getElementById("result");
 const plusBtn = document.getElementById("plus-btn");
+const addCart = document.getElementById("add-cart");
 
 let currentCart = 0;
 minusBtn.addEventListener("click", () => {
@@ -93,4 +94,18 @@ minusBtn.addEventListener("click", () => {
 plusBtn.addEventListener("click", () => {
   currentCart += 1;
   result.innerText = currentCart;
+});
+
+// add in cart
+const productName = document.getElementById("product-name").textContent;
+const productPrice = document.getElementById("product-price").textContent;
+
+let cart = [];
+addCart.addEventListener("click", () => {
+  let pname = productName.trim();
+  let price = productPrice.trim().slice(1);
+  
+  cart.push({ productname: pname, times: currentIndex, price });
+
+  console.log(cart);
 });
