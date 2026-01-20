@@ -99,19 +99,26 @@ plusBtn.addEventListener("click", () => {
 // add in cart
 const productName = document.getElementById("product-name").textContent;
 const productPrice = document.getElementById("product-price").textContent;
-
+const cartTotal = document.getElementById("cart-total");
 let cart = [];
 
 addCart.addEventListener("click", () => {
   let product = productName.trim();
   let total = Number(result.textContent.trim()) || 0;
+
   let price = Number(productPrice.trim().slice(1));
-  let existingProduct = cart.find(item => item.product === product);
+  let existingProduct = cart.find((item) => item.product === product);
+  if (total == 0) {
+    alert("You can not add zero item ");
+    return;
+  }
   if (existingProduct) {
-  
+    cartTotal.classList.remove("hidden");
+    cartTotal.innerText = total;
     existingProduct.times = total;
   } else {
+    cartTotal.classList.remove("hidden");
+    cartTotal.innerText = total;
     cart.push({ product, times: total, price });
-
   }
 });

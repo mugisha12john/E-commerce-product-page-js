@@ -64,12 +64,19 @@
         </div>
 
         <div class="flex justify-center items-center gap-5 lg:mr-10">
-          <img
-            id="cart-btn"
-            src="images/icon-cart.svg"
-            class="size-6 hover:cursor-pointer"
-            alt="icon-cart"
-          />
+          <button>
+            <img
+              id="cart-btn"
+              src="images/icon-cart.svg"
+              class="size-6 hover:cursor-pointer z-40 bg-white"
+              alt="icon-cart"
+            />
+            <div id="cart-total"
+              class="hidden w-5 h-5 rounded-full bg-amber-600 text-white font-display text-sm -mt-9 z-50 ml-3"
+            >
+              5
+            </div>
+          </button>
           <img
             src="images/image-avatar.png"
             class="size-10 hover:cursor-pointer hover:border-2 hover:border-amber-600 hover:rounded-full"
