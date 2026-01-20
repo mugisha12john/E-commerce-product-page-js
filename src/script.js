@@ -101,11 +101,17 @@ const productName = document.getElementById("product-name").textContent;
 const productPrice = document.getElementById("product-price").textContent;
 
 let cart = [];
-addCart.addEventListener("click", () => {
-  let pname = productName.trim();
-  let price = productPrice.trim().slice(1);
-  
-  cart.push({ productname: pname, times: currentIndex, price });
 
-  console.log(cart);
+addCart.addEventListener("click", () => {
+  let product = productName.trim();
+  let total = Number(result.textContent.trim()) || 0;
+  let price = Number(productPrice.trim().slice(1));
+  let existingProduct = cart.find(item => item.product === product);
+  if (existingProduct) {
+  
+    existingProduct.times = total;
+  } else {
+    cart.push({ product, times: total, price });
+
+  }
 });
