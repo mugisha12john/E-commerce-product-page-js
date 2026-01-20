@@ -102,6 +102,61 @@ const productPrice = document.getElementById("product-price").textContent;
 const cartTotal = document.getElementById("cart-total");
 let cart = [];
 
+function UpdateCartItem() {
+  if (cart.length === 0) {
+    cartItems.innerHTML = `
+      <div class="bg-white w-[360px] h-80 p-4 rounded-2xl">
+        <h1 class="capitalize font-display font-bold text-xl mt-5">cart</h1>
+        <h4 class="mt-10 text-center text-gray-500">Your cart is empty!</h4>
+      </div>
+    `;
+    return;
+  }
+
+  cartItems.innerHTML = `
+    <div class="bg-white w-[360px] p-4 rounded-2xl">
+      <h1 class="capitalize font-display font-bold text-xl mt-5">cart</h1>
+
+      ${cart
+        .map(
+          (item) => `
+          <div class="mt-10 flex justify-between items-center gap-5">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              class="size-14"
+              alt=""
+            />
+
+            <div>
+              <h1 class="font-display text-xl capitalize text-gray-500">
+                ${item.product}
+              </h1>
+
+              <p class="text-gray-500 text-xl lg:text-sm font-display">
+                $${item.price} x ${item.times}
+                <b class="text-black font-bold ml-4">$${(item.price * item.times).toFixed(2)}</b>
+              </p>
+            </div>
+
+            <img
+              src="images/icon-delete.svg"
+              class="size-6 lg:size-4 hover:cursor-pointer"
+              alt=""
+            />
+          </div>
+        `,
+        )
+        .join("")}
+
+      <button
+        class="bg-amber-600 p-2 w-full text-xl lg:text-sm font-semibold capitalize font-display mt-10 rounded-xl"
+      >
+        checkout
+      </button>
+    </div>
+  `;
+}
+UpdateCartItem();
 addCart.addEventListener("click", () => {
   let product = productName.trim();
   let total = Number(result.textContent.trim()) || 0;
@@ -116,9 +171,11 @@ addCart.addEventListener("click", () => {
     cartTotal.classList.remove("hidden");
     cartTotal.innerText = total;
     existingProduct.times = total;
+    UpdateCartItem();
   } else {
     cartTotal.classList.remove("hidden");
     cartTotal.innerText = total;
     cart.push({ product, times: total, price });
+    UpdateCartItem();
   }
 });
