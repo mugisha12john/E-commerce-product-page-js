@@ -17,8 +17,8 @@ closeBtn.addEventListener("click", () => {
 cartBtn.addEventListener("click", () => {
   cartItems.classList.toggle("hidden");
 });
-bgcolor.forEach((el, i) => {
-  el.addEventListener("click", () => {
+bgcolor.forEach((img, i) => {
+  img.addEventListener("click", () => {
     lightbox.classList.toggle("hidden");
     showImageLightBg(i, "desktop");
   });
@@ -88,7 +88,7 @@ let currentCart = 0;
 minusBtn.addEventListener("click", () => {
   currentCart -= 1;
   if (currentCart < 0) {
-    alert("You can not have negative cart");
+    alert("You can not have negative quantity of an item");
     return;
   }
   result.innerText = currentCart;
@@ -200,7 +200,6 @@ lightNext.addEventListener("click", () => {
 const activeLightbox = document.querySelectorAll(".ligthbox-change-bg");
 activeLightbox.forEach((element) => {
   element.addEventListener("click", () => {
-    // alert("am clicked too my number " + element.classList[1]);
     showImageLightBg(element.classList[1] - 1, "desktop");
   });
 });
