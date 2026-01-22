@@ -194,3 +194,11 @@ lightNext.addEventListener("click", () => {
   mobileNext();
   showImageLightBg(currentIndex, "desktop");
 });
+
+const activeLightbox = document.querySelectorAll(".ligthbox-change-bg");
+activeLightbox.forEach((element) => {
+  element.addEventListener("click", () => {
+    // alert("am clicked too my number " + element.classList[1]);
+    showImageLightBg(element.classList[1] - 1, "desktop");
+  });
+});

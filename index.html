@@ -271,13 +271,15 @@
             />
           </button>
           <div>
-            <img id="light-bg"
+            <img
+              id="light-bg"
               src="images/image-product-1.jpg"
               class="w-[27rem] rounded-2xl"
               alt=""
             />
             <div class="flex justify-between items-center relative -top-62">
-              <button id="light-prev"
+              <button
+                id="light-prev"
                 class="bg-white w-10 h-10 rounded-full hover:cursor-pointer flex justify-center items-center"
               >
                 <img
@@ -286,7 +288,8 @@
                   alt="lightbox previous"
                 />
               </button>
-              <button id="light-next"
+              <button
+                id="light-next"
                 class="bg-white w-10 h-10 rounded-full hover:cursor-pointer flex justify-center items-center"
               >
                 <img
@@ -297,27 +300,38 @@
               </button>
             </div>
           </div>
-          <div class="flex flex-row justify-center items-center -mt-5 gap-5">
-            <img
-              src="images/image-product-1-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer opacity-80 border-4 border-amber-600"
-              alt=""
-            />
-            <img
-              src="images/image-product-2-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer"
-              alt=""
-            />
-            <img
-              src="images/image-product-3-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer"
-              alt=""
-            />
-            <img
-              src="images/image-product-4-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer"
-              alt=""
-            />
+          <div
+            id="active-lightbox-image"
+            class="flex flex-row justify-center items-center -mt-5 gap-5"
+          >
+            <button class="ligthbox-change-bg 1">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer opacity-80 border-4 border-amber-600"
+                alt=""
+              />
+            </button>
+            <button class="ligthbox-change-bg 2">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer"
+                alt=""
+              />
+            </button>
+            <button class="ligthbox-change-bg 3">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer"
+                alt=""
+              />
+            </button>
+            <button class="ligthbox-change-bg 4">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer"
+                alt=""
+              />
+            </button>
           </div>
         </div>
       </div>
