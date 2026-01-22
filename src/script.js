@@ -101,7 +101,6 @@ const productName = document.getElementById("product-name").textContent;
 const productPrice = document.getElementById("product-price").textContent;
 const cartTotal = document.getElementById("cart-total");
 let cart = [];
-
 function UpdateCartItem() {
   if (cart.length === 0) {
     cartItems.innerHTML = `
@@ -137,12 +136,13 @@ function UpdateCartItem() {
                 <b class="text-black font-bold ml-4">$${(item.price * item.times).toFixed(2)}</b>
               </p>
             </div>
-
+            <button id="delete-cart">
             <img
               src="images/icon-delete.svg"
               class="size-6 lg:size-4 hover:cursor-pointer"
               alt=""
             />
+            </button>
           </div>
         `,
         )
@@ -178,4 +178,19 @@ addCart.addEventListener("click", () => {
     cart.push({ product, times: total, price });
     UpdateCartItem();
   }
+});
+
+const ligthPrev = document.getElementById("light-prev");
+const lightNext = document.getElementById("light-next");
+const lightBg = document.getElementById("light-bg");
+function showImageLightBg(index, screen) {
+  lightBg.setAttribute("src", image[index][screen]);
+}
+ligthPrev.addEventListener("click", () => {
+  mobilePrev();
+  showImageLightBg(currentIndex, "desktop");
+});
+lightNext.addEventListener("click", () => {
+  mobileNext();
+  showImageLightBg(currentIndex, "desktop");
 });
