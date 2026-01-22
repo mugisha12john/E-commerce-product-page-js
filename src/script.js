@@ -3,7 +3,7 @@ const menuList = document.getElementById("toggle-menu-bar");
 const closeBtn = document.getElementById("close-btn");
 const cartBtn = document.getElementById("cart-btn");
 const cartItems = document.getElementById("cart-items");
-const bgcolor = document.querySelectorAll("#bgToggle");
+const bgcolor = document.querySelectorAll("#bgToggle button");
 const lightbox = document.getElementById("lightbox");
 const closeLightbox = document.getElementById("close-lightbox");
 menuBtn.addEventListener("click", () => {
@@ -17,11 +17,12 @@ closeBtn.addEventListener("click", () => {
 cartBtn.addEventListener("click", () => {
   cartItems.classList.toggle("hidden");
 });
-
-
-// bgcolor.addEventListener("click", () => {
-//   lightbox.classList.toggle("hidden");
-// });
+bgcolor.forEach((el, i) => {
+  el.addEventListener("click", () => {
+    lightbox.classList.toggle("hidden");
+    showImageLightBg(i, "desktop");
+  });
+});
 closeLightbox.addEventListener("click", () => {
   lightbox.classList.toggle("hidden");
 });
