@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -64,12 +64,20 @@
         </div>
 
         <div class="flex justify-center items-center gap-5 lg:mr-10">
-          <img
-            id="cart-btn"
-            src="images/icon-cart.svg"
-            class="size-6 hover:cursor-pointer"
-            alt="icon-cart"
-          />
+          <button>
+            <img
+              id="cart-btn"
+              src="images/icon-cart.svg"
+              class="size-6 hover:cursor-pointer z-40 bg-white"
+              alt="icon-cart"
+            />
+            <div
+              id="cart-total"
+              class="hidden w-5 h-5 rounded-full bg-amber-600 text-white font-display text-sm -mt-9 z-50 ml-3"
+            >
+              5
+            </div>
+          </button>
           <img
             src="images/image-avatar.png"
             class="size-10 hover:cursor-pointer hover:border-2 hover:border-amber-600 hover:rounded-full"
@@ -103,49 +111,21 @@
       <div
         id="cart-items"
         class="m-4 hidden absolute mt-[20px] z-40 lg:ml-[900px] shadow-2xl shadow-gray-500 rounded-2xl"
-      >
-        <div class="bg-white w-[360px] h-80 p-4 rounded-2xl">
-          <h1 class="capitalize font-display font-bold text-xl mt-5">cart</h1>
-          <div class="mt-10 flex justify-between items-center gap-5">
-            <img
-              src="images/image-product-1-thumbnail.jpg"
-              class="size-14"
-              alt=""
-            />
-            <div>
-              <h1 class="font-display text-xl capitalize text-gray-500">
-                fall edition limited
-              </h1>
-              <p class="text-gray-500 text-xl lg:text-sm font-display">
-                $123 X 3 <b class="text-black">$435</b>
-              </p>
-            </div>
-            <img
-              src="images/icon-delete.svg"
-              class="size-6 lg:size-4 hover:cursor-pointer"
-              alt=""
-            />
-          </div>
-          <button
-            class="bg-amber-600 p-2 w-full text-xl lg:text-sm font-semibold capitalize font-display mt-10 rounded-xl"
-          >
-            checkout
-          </button>
-        </div>
-      </div>
+      ></div>
       <!-- hero section -->
       <div class="lg:flex lg:justify-center lg:items-center lg:ml-48">
         <div class="relative z-10">
           <img
+            id="hero-section"
             src="images/image-product-1.jpg"
             class="w-full lg:w-[500px] mt-14 lg:h-[400px] lg:rounded-2xl"
-            alt=""
+            alt="background"
           />
-          <div class="lg:mt-4 hidden lg:flex justify-evenly">
-            <button
-              id="bgToggle"
-              class="opacity-50 border-4 border-amber-600 rounded-xl"
-            >
+          <div
+            id="bgToggle"
+            class="bgToggle lg:mt-4 hidden lg:flex justify-evenly"
+          >
+            <button class="opacity-50 border-4 border-amber-600 rounded-xl">
               <img
                 src="images/image-product-1.jpg"
                 class="size-20 rounded-xl"
@@ -174,14 +154,17 @@
               />
             </button>
           </div>
+          <!-- mobile btn change images -->
           <div class="absolute top-45 mr-4 ml-4">
             <div class="flex justify-between items-center lg:hidden">
               <button
+                id="mobile-prev-btn"
                 class="w-10 h-10 rounded-full bg-white flex justify-center items-center"
               >
                 <img class="size-5" src="images/icon-previous.svg" alt="" />
               </button>
               <button
+                id="mobile-next-btn"
                 class="w-10 ml-72 h-10 rounded-full bg-white flex justify-center items-center"
               >
                 <img class="size-5" src="images/icon-next.svg" alt="" />
@@ -199,7 +182,10 @@
               >
                 sneakers company
               </h1>
-              <h4 class="capitalize mt-5 text-4xl font-bold font-display">
+              <h4
+                id="product-name"
+                class="capitalize mt-5 text-4xl font-bold font-display"
+              >
                 fall limited edition sneakers
               </h4>
               <p
@@ -218,7 +204,9 @@
             <div
               class="m-4 flex justify-center gap-5 item-center lg:justify-start"
             >
-              <h3 class="text-3xl font-bold lg:text-2xl">$124.100</h3>
+              <h3 id="product-price" class="text-3xl font-bold lg:text-2xl">
+                $124.100
+              </h3>
               <button
                 class="w-15 h-10 lg:w-10 lg:h-8 lg:text-sm rounded-xl text-white bg-black font-bold font-display"
               >
@@ -235,20 +223,28 @@
             class="lg:w-1/2 lg:flex lg:justify-center lg:items-center lg:gap-10"
           >
             <div class="m-4 flex justify-evenly items-center lg:gap-10">
-              <button class="size-10 hover:cursor-pointer hover:opacity-50">
+              <button
+                id="minus-btn"
+                class="size-10 hover:cursor-pointer hover:opacity-50"
+              >
                 <img src="images/icon-minus.svg" alt="" />
               </button>
-              <p class="text-2xl font-bold lg:font-medium lg:text-xl lg:-ml-6">
+              <p
+                id="result"
+                class="text-2xl font-bold lg:font-medium lg:text-xl lg:-ml-6"
+              >
                 0
               </p>
               <button
+                id="plus-btn"
                 class="size-10 lg:size-14 hover:cursor-pointer hover:opacity-50"
               >
-                <img src="images/icon-plus.svg" alt="" />
+                <img src="images/icon-plus.svg" class="size-4" alt="" />
               </button>
             </div>
             <button
-              class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center lg:w-1/2 lg:h-12 p-2 gap-5 rounded-2xl lg:text-lg hover:opacity-60 hover:cursor-pointer"
+              id="add-cart"
+              class="bg-amber-600 m-4 w-80 flex justify-center text-black font-bold font-display text-2xl items-center lg:m-0 lg:p-0 lg:w-1/2 lg:h-12 p-2 gap-5 rounded-2xl lg:text-lg hover:opacity-60 hover:cursor-pointer"
             >
               <img src="images/icon-cart.svg" class="" alt="" /> add cart
             </button>
@@ -276,12 +272,14 @@
           </button>
           <div>
             <img
+              id="light-bg"
               src="images/image-product-1.jpg"
               class="w-[27rem] rounded-2xl"
               alt=""
             />
             <div class="flex justify-between items-center relative -top-62">
               <button
+                id="light-prev"
                 class="bg-white w-10 h-10 rounded-full hover:cursor-pointer flex justify-center items-center"
               >
                 <img
@@ -291,6 +289,7 @@
                 />
               </button>
               <button
+                id="light-next"
                 class="bg-white w-10 h-10 rounded-full hover:cursor-pointer flex justify-center items-center"
               >
                 <img
@@ -301,27 +300,38 @@
               </button>
             </div>
           </div>
-          <div class="flex flex-row justify-center items-center -mt-5 gap-5">
-            <img
-              src="images/image-product-1-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer opacity-80 border-4 border-amber-600"
-              alt=""
-            />
-            <img
-              src="images/image-product-2-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer"
-              alt=""
-            />
-            <img
-              src="images/image-product-3-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer"
-              alt=""
-            />
-            <img
-              src="images/image-product-4-thumbnail.jpg"
-              class="size-20 rounded-xl hover:cursor-pointer"
-              alt=""
-            />
+          <div
+            id="active-lightbox-image"
+            class="flex flex-row justify-center items-center -mt-5 gap-5"
+          >
+            <button class="ligthbox-change-bg 1">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                class="size-20 rounded-xl"
+                alt=""
+              />
+            </button>
+            <button class="ligthbox-change-bg 2">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer"
+                alt=""
+              />
+            </button>
+            <button class="ligthbox-change-bg 3">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer"
+                alt=""
+              />
+            </button>
+            <button class="ligthbox-change-bg 4">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                class="size-20 rounded-xl hover:cursor-pointer"
+                alt=""
+              />
+            </button>
           </div>
         </div>
       </div>
