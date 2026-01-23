@@ -158,6 +158,7 @@ function UpdateCartItem() {
     </div>
   `;
 }
+
 UpdateCartItem();
 addCart.addEventListener("click", () => {
   let product = productName.trim();
@@ -203,3 +204,4 @@ activeLightbox.forEach((element) => {
     showImageLightBg(element.classList[1] - 1, "desktop");
   });
 });
+
