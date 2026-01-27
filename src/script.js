@@ -21,6 +21,10 @@ bgcolor.forEach((img, i) => {
   img.addEventListener("click", () => {
     lightbox.classList.toggle("hidden");
     showImageLightBg(i, "desktop");
+    bgcolor.forEach((el) => el.classList.remove("active"));
+
+    img.classList.add("active");
+    ChangeHeroSection(i, "desktop");
   });
 });
 closeLightbox.addEventListener("click", () => {
@@ -67,6 +71,9 @@ function mobilePrev() {
   }
 }
 function showImage(index, screen) {
+  heroSection.setAttribute("src", image[index][screen]);
+}
+function ChangeHeroSection(index, screen) {
   heroSection.setAttribute("src", image[index][screen]);
 }
 mobileNextBtn.addEventListener("click", () => {
@@ -204,4 +211,3 @@ activeLightbox.forEach((element) => {
     showImageLightBg(element.classList[1] - 1, "desktop");
   });
 });
-
