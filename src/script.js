@@ -19,8 +19,12 @@ cartBtn.addEventListener("click", () => {
 });
 bgcolor.forEach((img, i) => {
   img.addEventListener("click", () => {
-    lightbox.classList.toggle("hidden");
+    lightbox.classList.remove("hidden");
     showImageLightBg(i, "desktop");
+    bgcolor.forEach((el) => el.classList.remove("active"));
+
+    img.classList.add("active");
+    showImage(i, "desktop");
   });
 });
 closeLightbox.addEventListener("click", () => {
@@ -204,4 +208,3 @@ activeLightbox.forEach((element) => {
     showImageLightBg(element.classList[1] - 1, "desktop");
   });
 });
-

@@ -2,3 +2,6 @@
 @theme {
   --font-display: "Kumbh Sans", "sans-serif";
 }
+.active {
+  @apply border-4 rounded-xl border-amber-600 opacity-70;
+}
