@@ -585,9 +585,29 @@
       }
     }
   }
-  .md\:block {
+  .md\:top-96 {
     @media (width >= 48rem) {
-      display: block;
+      top: calc(var(--spacing) * 96);
+    }
+  }
+  .md\:ml-\[45rem\] {
+    @media (width >= 48rem) {
+      margin-left: 45rem;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
+  .md\:gap-30 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 30);
     }
   }
   .lg\:m-0 {
@@ -633,6 +653,11 @@
   .lg\:ml-\[900px\] {
     @media (width >= 64rem) {
       margin-left: 900px;
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
     }
   }
   .lg\:flex {
