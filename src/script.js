@@ -19,12 +19,12 @@ cartBtn.addEventListener("click", () => {
 });
 bgcolor.forEach((img, i) => {
   img.addEventListener("click", () => {
-    lightbox.classList.toggle("hidden");
+    lightbox.classList.remove("hidden");
     showImageLightBg(i, "desktop");
     bgcolor.forEach((el) => el.classList.remove("active"));
 
     img.classList.add("active");
-    ChangeHeroSection(i, "desktop");
+    showImage(i, "desktop");
   });
 });
 closeLightbox.addEventListener("click", () => {
@@ -71,9 +71,6 @@ function mobilePrev() {
   }
 }
 function showImage(index, screen) {
-  heroSection.setAttribute("src", image[index][screen]);
-}
-function ChangeHeroSection(index, screen) {
   heroSection.setAttribute("src", image[index][screen]);
 }
 mobileNextBtn.addEventListener("click", () => {
